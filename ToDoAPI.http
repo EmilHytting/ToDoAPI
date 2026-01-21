@@ -1,0 +1,29 @@
+﻿@ToDoAPI_HostAddress = https://localhost:7187
+
+### GET alle todo items
+GET {{ToDoAPI_HostAddress}}/todoitems
+
+### GET et enkelt todo item (skift {id} ud med et rigtigt id)
+GET {{ToDoAPI_HostAddress}}/todoitems/{id}
+
+### POST et nyt todo item
+POST {{ToDoAPI_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name": "walk dog",
+  "isComplete": true
+}
+
+### PUT (opdater) et todo item (skift {id} ud med et rigtigt id)
+PUT {{ToDoAPI_HostAddress}}/todoitems/{id}
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "feed fish",
+  "isComplete": false
+}
+
+### DELETE et todo item (skift {id} ud med et rigtigt id)
+DELETE {{ToDoAPI_HostAddress}}/todoitems/{id}
