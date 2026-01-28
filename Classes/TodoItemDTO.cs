@@ -1,13 +1,6 @@
-﻿namespace ToDoAPI.Classes
-{
-    public class TodoItemDTO
-    {
-		public int Id { get; set; }
-		public string? Name { get; set; }
-		public bool IsComplete { get; set; }
+﻿namespace ToDoAPI.Classes;
 
-		public TodoItemDTO() { }
-		public TodoItemDTO(Todo todoItem) =>
-		(Id, Name, IsComplete) = (todoItem.Id, todoItem.Name, todoItem.IsComplete);
-	}
+public record TodoItemDTO(int Id, string? Name, bool IsComplete, int? TaskId = null)
+{
+	public TodoItemDTO(Todo todoItem) : this(todoItem.Id, todoItem.Name, todoItem.IsComplete, todoItem.TaskId) { }
 }
