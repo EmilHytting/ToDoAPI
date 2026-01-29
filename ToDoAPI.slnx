@@ -2,5 +2,9 @@
   <Folder Name="/Solution Items/">
     <File Path="Development.md" />
   </Folder>
+  <Project Path="ToDo.web/todo.web.esproj">
+    <Build />
+    <Deploy />
+  </Project>
   <Project Path="ToDoAPI.csproj" />
 </Solution>
